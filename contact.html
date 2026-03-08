@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – Jeenie</title>
+    <meta name="description"
+        content="Contact the Jeenie support team. We're here to help with any questions about our WhatsApp JEE prep bot." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jeenie.koax.in/contact.html" />
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236C3DE8'/><text y='.9em' font-size='80' x='10'>🧠</text></svg>" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 48px;
+            align-items: start;
+            margin-top: 60px;
+        }
+
+        .contact-channels {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-channel {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            transition: var(--transition);
+        }
+
+        .contact-channel:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+        }
+
+        .contact-channel-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .contact-channel h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .contact-channel p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .contact-channel a {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-light);
+        }
+
+        .contact-channel a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+        }
+
+        .contact-form-card h2 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .contact-form-card>p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background: var(--bg-surface);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 13px 16px;
+            font-size: 14px;
+            font-family: var(--font-sans);
+            color: var(--text-primary);
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(108, 61, 232, 0.1);
+        }
+
+        .form-group textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        .form-group select option {
+            background: var(--bg-card);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-submit {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 15px 32px;
+            border-radius: var(--radius-pill);
+            font-size: 15px;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            box-shadow: 0 4px 20px rgba(108, 61, 232, 0.4);
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(108, 61, 232, 0.6);
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .form-success-icon {
+            font-size: 64px;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .form-success h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .form-success p {
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav scrolled" id="nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="/" class="nav-logo" aria-label="Jeenie Home">
+                    <div class="logo-icon" aria-hidden="true">🧠</div>
+                    <span>Jeenie</span>
+                </a>
+                <div class="nav-links">
+                    <a href="/#features">Features</a>
+                    <a href="/#pricing">Pricing</a>
+                    <a href="/#faq">FAQ</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="https://wa.me/91XXXXXXXXXX?text=Hi+Jeenie!" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-whatsapp" style="padding:10px 20px;font-size:14px;">
+                        💬 Start Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header -->
+    <div class="page-hero" aria-label="Page header">
+        <div class="container" style="position:relative;z-index:2;">
+            <span class="badge badge-primary" style="margin-bottom:16px;display:inline-flex;">💬 Get in Touch</span>
+            <h1>Contact Us</h1>
+            <p>We typically reply within 24 hours on business days</p>
+        </div>
+    </div>
+    <!-- Content -->
+    <main>
+        <section class="section-sm">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Left: Contact Channels -->
+                    <div>
+                        <h2 style="font-size:24px;font-weight:800;margin-bottom:8px;">How can we <span
+                                class="text-gradient">help you?</span></h2>
+                        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:28px;line-height:1.7;">Choose
+                            the fastest way to reach our team. For the quickest response, WhatsApp support is
+                            recommended.</p>
+                        <div class="contact-channels">
+                            <div class="contact-channel">
+                                <div class="contact-channel-icon" style="background:rgba(37,211,102,0.12);">💬</div>
+                                <div>
+                                    <h3>WhatsApp Support</h3>
+                                    <p>Fastest response. Message us directly and we'll help you in real time.</p>
+                                    <a href="https://wa.me/91XXXXXXXXXX?text=Hi+Jeenie+Support,+I+need+help+with..."
+                                        target="_blank" rel="noopener noreferrer">Chat on WhatsApp →</a>
+                                </div>
+                            </div>
+                            <div class="contact-channel">
+                                <div class="contact-channel-icon" style="background:rgba(108,61,232,0.15);">📧</div>
+                                <div>
+                                    <h3>Email Support</h3>
+                                    <p>For refunds, technical issues, and account queries. We reply within 24 hours.</p>
+                                    <a href="mailto:support@jeenie.koax.in">support@jeenie.koax.in →</a>
+                                </div>
+                            </div>
+                            <div class="contact-channel">
+                                <div class="contact-channel-icon" style="background:rgba(239,68,68,0.12);">⚖️</div>
+                                <div>
+                                    <h3>Legal / Privacy</h3>
+                                    <p>For legal and data privacy queries, GDPR requests, or business inquiries.</p>
+                                    <a href="mailto:legal@jeenie.koax.in">legal@jeenie.koax.in →</a>
+                                </div>
+                            </div>
+                            <div class="contact-channel">
+                                <div class="contact-channel-icon" style="background:rgba(245,158,11,0.12);">🤝</div>
+                                <div>
+                                    <h3>Partnerships &amp; Collaborations</h3>
+                                    <p>Coaching institutes, content creators, or educational platforms interested in
+                                        partnering.</p>
+                                    <a href="mailto:partnerships@jeenie.koax.in">partnerships@jeenie.koax.in →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Info block -->
+                        <div
+                            style="margin-top:28px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;">
+                            <h4
+                                style="font-size:14px;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);">
+                                Business Information</h4>
+                            <div
+                                style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:var(--text-secondary);">
+                                <div><span style="color:var(--text-muted);">Company:</span>&nbsp; Koax Technologies
+                                </div>
+                                <div><span style="color:var(--text-muted);">Website:</span>&nbsp; <a
+                                        href="https://jeenie.koax.in"
+                                        style="color:var(--primary-light);">jeenie.koax.in</a></div>
+                                <div><span style="color:var(--text-muted);">Country:</span>&nbsp; India 🇮🇳</div>
+                                <div><span style="color:var(--text-muted);">Support Hours:</span>&nbsp; Mon–Sat, 9 AM –
+                                    6 PM IST</div>
+                                <div><span style="color:var(--text-muted);">Payments:</span>&nbsp; Secured by Razorpay
+                                    🔒</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right: Contact Form -->
+                    <div class="contact-form-card">
+                        <h2>Send us a Message</h2>
+                        <p>Fill in the form and we'll get back to you as soon as possible.</p>
+                        <form id="contactForm" novalidate aria-label="Contact form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name *</label>
+                                    <input type="text" id="name" name="name" placeholder="e.g. Arjun Sharma" required
+                                        autocomplete="name" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">WhatsApp Number *</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required
+                                        autocomplete="tel" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="you@email.com"
+                                    autocomplete="email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject / Category *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Select a category...</option>
+                                    <option value="account">Account Issue</option>
+                                    <option value="payment">Payment / Credits</option>
+                                    <option value="refund">Refund Request</option>
+                                    <option value="technical">Technical Problem</option>
+                                    <option value="feature">Feature Request</option>
+                                    <option value="content">Content / Question Error</option>
+                                    <option value="partnership">Partnership Inquiry</option>
+                                    <option value="privacy">Privacy / Data Request</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="razorpay-id">Razorpay Payment ID <span
+                                        style="color:var(--text-muted);font-weight:400;text-transform:none;">(if payment
+                                        related)</span></label>
+                                <input type="text" id="razorpay-id" name="razorpay_id"
+                                    placeholder="pay_XXXXXXXXXXXXXXXXXX" />
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" placeholder="Describe your issue in detail..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="form-submit" id="contactSubmit">
+                                Send Message →
+                            </button>
+                            <p style="font-size:12px;color:var(--text-muted);text-align:center;margin-top:14px;">By
+                                submitting this form, you agree to our <a href="privacy-policy.html"
+                                    style="color:var(--primary-light);">Privacy Policy</a>.</p>
+                        </form>
+                        <div class="form-success" id="formSuccess" role="alert">
+                            <span class="form-success-icon">✅</span>
+                            <h3>Message Sent!</h3>
+                            <p>We've received your message and will reply to your WhatsApp or email within <strong>24
+                                    hours</strong>.</p>
+                            <br />
+                            <a href="/" class="btn btn-primary" style="margin:0 auto;display:inline-flex;">← Back to
+                                Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer style="border-top:1px solid var(--border);padding:24px 0;text-align:center;">
+        <div class="container">
+            <p style="font-size:13px;color:var(--text-muted);">© 2024 Jeenie (jeenie.koax.in) · <a
+                    href="privacy-policy.html" style="color:var(--primary-light);">Privacy</a> · <a
+                    href="terms-of-service.html" style="color:var(--primary-light);">Terms</a> · <a
+                    href="refund-policy.html" style="color:var(--primary-light);">Refunds</a></p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form handling
+        const form = document.getElementById('contactForm');
+        const successDiv = document.getElementById('formSuccess');
+        const submitBtn = document.getElementById('contactSubmit');
+        form?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Basic validation
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+            if (!name || !phone || !subject || !message) {
+                alert('Please fill in all required fields (*).');
+                return;
+            }
+            // Simulate form submission
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            // In production: send to your backend endpoint
+            // await fetch('/api/contact', { method: 'POST', ... })
+
+            setTimeout(() => {
+                form.style.display = 'none';
+                successDiv.style.display = 'block';
+            }, 1200);
+        });
+        // Keyboard accessibility for FAQ
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    q.click();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeenie – AI JEE Prep on WhatsApp | Practice, Solve & Ace JEE</title>
+    <meta name="description"
+        content="Jeenie is an AI-powered WhatsApp bot for JEE Mains & Advanced preparation. Get instant MCQ tests, doubt solving, chapter summaries, formula flashcards & daily streaks. Start for free with 20 credits." />
+    <meta name="keywords"
+        content="JEE preparation, JEE Mains, JEE Advanced, WhatsApp bot, AI tutoring, online coaching, IIT preparation, doubt solving" />
+    <meta name="author" content="Jeenie" />
+    <meta name="robots" content="index, follow" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jeenie – AI JEE Prep on WhatsApp" />
+    <meta property="og:description"
+        content="Study smarter with an AI bot that sends you MCQs, solves doubts, and keeps your JEE streak alive — all on WhatsApp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jeenie.koax.in" />
+    <meta property="og:image" content="https://jeenie.koax.in/assets/og-image.png" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jeenie – AI JEE Prep on WhatsApp" />
+    <meta name="twitter:description"
+        content="The smartest WhatsApp bot for JEE aspirants. MCQ tests, doubts solved instantly, daily streaks & more." />
+    <!-- Canonical -->
+    <link rel="canonical" href="https://jeenie.koax.in" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236C3DE8'/><text y='.9em' font-size='80' x='10'>🧠</text></svg>" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Razorpay SDK -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Jeenie",
+    "applicationCategory": "EducationApplication",
+    "operatingSystem": "WhatsApp",
+    "description": "AI-powered WhatsApp bot for JEE Mains and Advanced preparation",
+    "url": "https://jeenie.koax.in",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Starter Pack",
+        "price": "49",
+        "priceCurrency": "INR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Popular Pack",
+        "price": "99",
+        "priceCurrency": "INR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro Pack",
+        "price": "199",
+        "priceCurrency": "INR"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+    <!-- ============================================
+     NAVIGATION
+     ============================================ -->
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="/" class="nav-logo" aria-label="Jeenie Home">
+                    <div class="logo-icon" aria-hidden="true">🧠</div>
+                    <span>Jeenie</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="#pricing" class="btn btn-outline" style="padding:10px 20px;font-size:14px;">View Plans</a>
+                    <a href="https://wa.me/91XXXXXXXXXX?text=Hi+Jeenie!+I+want+to+start+my+JEE+prep" target="_blank"
+                        rel="noopener noreferrer" class="btn btn-whatsapp wa-start"
+                        style="padding:10px 20px;font-size:14px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        Start Free
+                    </a>
+                    <button class="nav-hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">✕</button>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer"
+            class="btn btn-whatsapp wa-start">Start Free on WhatsApp</a>
+    </div>
+    <!-- ============================================
+     HERO SECTION
+     ============================================ -->
+    <main>
+        <section class="hero" id="hero" aria-label="Hero section">
+            <div class="hero-bg">
+                <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+                <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+                <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+                <div class="hero-grid" aria-hidden="true"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-badge animate-on-scroll">
+                            <span class="badge badge-green">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="#10B981" aria-hidden="true">
+                                    <circle cx="4" cy="4" r="4" />
+                                </svg>
+                                🚀 Now in Beta — <span data-cfg="signupCredits">10</span> Free Credits for Early Joiners
+                            </span>
+                        </div>
+                        <h1 class="hero-title animate-on-scroll">
+                            Your JEE Guru<br />
+                            is <span class="text-gradient">Now on</span><br />
+                            <span class="text-whatsapp" style="color:#25D366;">WhatsApp</span> 🔥
+                        </h1>
+                        <p class="hero-subtitle animate-on-scroll">
+                            Jeenie is an AI-powered bot that gives you instant MCQ tests, solves your doubts
+                            step-by-step, delivers chapter summaries, and keeps you motivated with daily streaks — all
+                            inside WhatsApp. No app downloads. No extra logins.
+                        </p>
+                        <div class="hero-actions animate-on-scroll">
+                            <a href="https://wa.me/91XXXXXXXXXX?text=Hi+Jeenie!+Start+my+JEE+prep" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-whatsapp btn-lg wa-start" id="hero-cta">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                </svg>
+                                Start Prepping Free
+                            </a>
+                            <a href="#features" class="btn btn-outline btn-lg">Explore Features ↓</a>
+                        </div>
+                        <div class="hero-stats animate-on-scroll">
+                            <div class="hero-stat">
+                                <span class="hero-stat-value text-gradient" data-count="5000">0</span>
+                                <span class="hero-stat-label">Active Students</span>
+                            </div>
+                            <div class="hero-stat">
+                                <span class="hero-stat-value text-green-gradient" data-count="50000">0</span>
+                                <span class="hero-stat-label">Questions Solved</span>
+                            </div>
+                            <div class="hero-stat">
+                                <span class="hero-stat-value text-gold-gradient">4.9⭐</span>
+                                <span class="hero-stat-label">Student Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Phone Mockup -->
+                    <div class="hero-visual" id="phoneSection" aria-hidden="true">
+                        <div class="phone-mockup" role="presentation">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="wa-header">
+                                    <div class="wa-avatar">🧠</div>
+                                    <div class="wa-contact-info">
+                                        <div class="wa-contact-name">Jeenie – JEE AI Bot</div>
+                                        <div class="wa-contact-status">● Online</div>
+                                    </div>
+                                </div>
+                                <div class="wa-body" id="chatBody" role="log" aria-label="WhatsApp chat simulation">
+                                    <!-- Messages inserted by JS -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating badges -->
+                        <div class="float-badge float-badge-1">🔥 14-day streak!</div>
+                        <div class="float-badge float-badge-2">✅ +15 Credits earned</div>
+                        <div class="float-badge float-badge-3">📊 Top 3% this week</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============================================
+     TRUST BAR
+     ============================================ -->
+        <div class="trust-bar" aria-label="Trust indicators">
+            <div class="container">
+                <div class="trust-bar-inner">
+                    <div class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">🔒</span>
+                        <span>Secure Payments via Razorpay</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">📱</span>
+                        <span>Works on Any WhatsApp</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">⚡</span>
+                        <span>Instant Responses</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">🎓</span>
+                        <span>JEE Mains + Advanced</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">🎁</span>
+                        <span>20 Free Credits on Signup</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================
+     FEATURES SECTION
+     ============================================ -->
+        <section class="section" id="features" aria-labelledby="features-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="badge badge-primary">✨ Everything You Need</span>
+                    <h2 class="section-title" id="features-heading">Your <span class="text-gradient">Complete JEE
+                            Toolkit</span> — Inside WhatsApp</h2>
+                    <p class="section-subtitle">No extra apps. No subscriptions to manage. Just text Jeenie and get
+                        everything you need to crack JEE.</p>
+                </div>
+                <div class="features-grid">
+                    <!-- Feature 1 - Wide -->
+                    <div class="feature-card feature-card-wide animate-on-scroll">
+                        <div>
+                            <div class="feature-icon feature-icon-purple">📝</div>
+                            <h3>Mini Test Sessions</h3>
+                            <p>Type "test me on Thermodynamics" and instantly get 5–10 JEE-style MCQs with difficulty
+                                tags. Get immediate feedback on each answer — correct explanation or detailed
+                                wrong-answer breakdown — and a scorecard flagging your weak sub-topics at the end.</p>
+                            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+                                <span class="feature-tag">📊 Weak topic detection</span>
+                                <span class="feature-tag">🏷️ Difficulty tagged</span>
+                                <span class="feature-tag">📈 History tracked</span>
+                            </div>
+                        </div>
+                        <div
+                            style="background:var(--bg-surface);border-radius:var(--radius-md);padding:16px;font-size:13px;color:var(--text-secondary);font-family:var(--font-mono);line-height:1.8;">
+                            <div style="color:#25D366;margin-bottom:8px;">You → Jeenie</div>
+                            <div
+                                style="background:rgba(37,211,102,0.08);border-left:2px solid #25D366;padding:8px 12px;border-radius:4px;margin-bottom:10px;color:var(--text-primary);">
+                                "test me on Electrostatics, 5 Qs"</div>
+                            <div style="color:#A78BFA;margin-bottom:8px;">Jeenie → You</div>
+                            <div
+                                style="background:rgba(108,61,232,0.08);border-left:2px solid #6C3DE8;padding:8px 12px;border-radius:4px;color:var(--text-secondary);">
+                                ⚡ <strong style="color:var(--text-primary);">Electrostatics Test</strong><br />
+                                Q1 (Medium): Two charges q₁=+3μC...<br />
+                                A) 27N B) 9N C) 3N D) 1N<br />
+                                <em style="color:#10B981;">→ You answered B: ✅ Correct!</em>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon feature-icon-green">📖</div>
+                        <h3>Chapter Summaries & Mindmaps</h3>
+                        <p>Get crisp WhatsApp-formatted summaries with bold, italics & emojis for quick scanning. Or
+                            request a mindmap — delivered as structured ASCII text or as a PDF document.</p>
+                        <span class="feature-tag">📄 PDF delivery</span>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon feature-icon-gold">🤔</div>
+                        <h3>Instant Doubt Solver</h3>
+                        <p>Paste a question or snap a photo. Jeenie solves it step-by-step, JEE-style, with the key
+                            concept labeled. Supports text and image input with OCR.</p>
+                        <span class="feature-tag">📷 Image input supported</span>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon feature-icon-red">📅</div>
+                        <h3>PYQ Mode</h3>
+                        <p>Access curated Previous Year Questions from JEE Mains & Advanced (2019–2024) with detailed
+                            solutions and most-tested concept tags for targeted preparation.</p>
+                        <span class="feature-tag">📚 2019–2024 coverage</span>
+                    </div>
+                    <!-- Feature 5 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon feature-icon-blue">⚡</div>
+                        <h3>Formula Flashcards</h3>
+                        <p>Type "flashcards – Electrostatics" and receive 5 key formulas one by one with 30-second
+                            intervals. React 👍 (got it) or 👎 (see again) to trigger spaced repetition.</p>
+                        <span class="feature-tag">🔁 Spaced repetition</span>
+                    </div>
+                    <!-- Feature 6 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon feature-icon-pink">🤝</div>
+                        <h3>Friend Challenges & Referrals</h3>
+                        <p>Challenge a friend with "challenge @friend" — both get the same question, first to answer
+                            wins! Refer friends: you both get <span data-cfg="referralCredits">10</span> bonus credits.
+                        </p>
+                        <span class="feature-tag">🎁 <span data-cfg="referralCredits">10</span> referral credits</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============================================
+     HOW IT WORKS
+     ============================================ -->
+        <section class="section how-it-works" id="how-it-works" aria-labelledby="hiw-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="badge badge-green">⚡ Super Simple</span>
+                    <h2 class="section-title" id="hiw-heading">Start in <span class="text-gradient">3 Easy Steps</span>
+                    </h2>
+                    <p class="section-subtitle">No app downloads. No account setup. Just your WhatsApp.</p>
+                </div>
+                <div class="steps-container">
+                    <div class="step animate-on-scroll">
+                        <div class="step-number">💬</div>
+                        <h3>1. Message Jeenie</h3>
+                        <p>Click the button and send your first message on WhatsApp. You're instantly live.</p>
+                    </div>
+                    <div class="step animate-on-scroll">
+                        <div class="step-number">🎁</div>
+                        <h3>2. Get <span data-cfg="signupCredits">10</span> Free Credits</h3>
+                        <p>New users get <span data-cfg="signupCredits">10</span> free credits automatically. No payment
+                            required to start.</p>
+                    </div>
+                    <div class="step animate-on-scroll">
+                        <div class="step-number">🚀</div>
+                        <h3>3. Start Prepping</h3>
+                        <p>Ask for tests, summaries, doubts, or flashcards. Jeenie responds instantly, every time.</p>
+                    </div>
+                    <div class="step animate-on-scroll">
+                        <div class="step-number">🔥</div>
+                        <h3>4. Build Your Streak</h3>
+                        <p>Come back daily to answer your streak question and climb the leaderboard.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============================================
+     VIRAL / STREAK SECTION
+     ============================================ -->
+        <section class="section viral-section" id="streak" aria-labelledby="streak-heading">
+            <div class="viral-bg" aria-hidden="true"></div>
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="badge badge-gold">🔥 Most Loved Feature</span>
+                    <h2 class="section-title" id="streak-heading">The Daily Streak That <span
+                            class="text-gold-gradient">Makes JEE Fun</span></h2>
+                    <p class="section-subtitle">Like Duolingo, but for JEE. Stay consistent, track progress, and compete
+                        with friends.</p>
+                </div>
+                <div class="viral-content">
+                    <div class="viral-text animate-on-scroll">
+                        <h3>Stay Consistent, Win More</h3>
+                        <p>Every day, Jeenie sends you 1 surprise question from your weakest topics. Answer it to
+                            maintain your streak — miss a day and it resets. It's the simplest way to build a daily prep
+                            habit.</p>
+                        <div class="viral-features">
+                            <div class="viral-feature">
+                                <div class="viral-feature-icon">🔥</div>
+                                <div class="viral-feature-text">
+                                    <strong>Daily Streak Counter</strong>
+                                    <span>Miss a day and it resets. Keep it alive like Duolingo.</span>
+                                </div>
+                            </div>
+                            <div class="viral-feature">
+                                <div class="viral-feature-icon">🏆</div>
+                                <div class="viral-feature-text">
+                                    <strong>Weekly Leaderboard</strong>
+                                    <span>See how you rank among all Jeenie users. Get a shareable rank card.</span>
+                                </div>
+                            </div>
+                            <div class="viral-feature">
+                                <div class="viral-feature-icon">⚔️</div>
+                                <div class="viral-feature-text">
+                                    <strong>1v1 Friend Challenges</strong>
+                                    <span>Same question, race to answer first. Bragging rights included.</span>
+                                </div>
+                            </div>
+                            <div class="viral-feature">
+                                <div class="viral-feature-icon">📤</div>
+                                <div class="viral-feature-text">
+                                    <strong>Shareable Rank Cards</strong>
+                                    <span>Auto-generated weekly WhatsApp-ready rank card. Viral by design.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top:28px;">
+                            <span class="badge badge-green" style="font-size:13px;padding:8px 16px;">🎁 Daily Streaks
+                                are 100% FREE — Forever</span>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll">
+                        <div class="streak-demo" style="margin-bottom:20px;">
+                            <span class="streak-fire" aria-label="Fire emoji">🔥</span>
+                            <span class="streak-count text-gold-gradient" id="streakCount"
+                                aria-label="14 day streak">0</span>
+                            <span class="streak-label">Day Streak</span>
+                            <div class="streak-badges">
+                                <span class="badge badge-gold">🏅 Top 5% this week</span>
+                                <span class="badge badge-green">⚡ On a roll!</span>
+                            </div>
+                        </div>
+                        <div class="leaderboard" role="table" aria-label="Weekly leaderboard">
+                            <div class="leaderboard-header" role="row">
+                                🏆 Weekly Leaderboard &nbsp;•&nbsp; This Week
+                            </div>
+                            <div class="leaderboard-row" role="row">
+                                <span class="leaderboard-rank" role="cell">🥇</span>
+                                <div class="leaderboard-avatar" style="background:rgba(245,158,11,0.2);" role="cell">😎
+                                </div>
+                                <span class="leaderboard-name" role="cell">Arjun M.</span>
+                                <span class="leaderboard-score" role="cell">347 pts</span>
+                                <span class="leaderboard-streak" role="cell">🔥 21d</span>
+                            </div>
+                            <div class="leaderboard-row" role="row">
+                                <span class="leaderboard-rank" role="cell">🥈</span>
+                                <div class="leaderboard-avatar" style="background:rgba(139,92,246,0.2);" role="cell">🧠
+                                </div>
+                                <span class="leaderboard-name" role="cell">Priya K.</span>
+                                <span class="leaderboard-score" role="cell">312 pts</span>
+                                <span class="leaderboard-streak" role="cell">🔥 18d</span>
+                            </div>
+                            <div class="leaderboard-row leaderboard-you" role="row" aria-label="Your position">
+                                <span class="leaderboard-rank" role="cell">🏅</span>
+                                <div class="leaderboard-avatar" style="background:rgba(108,61,232,0.2);" role="cell">⭐
+                                </div>
+                                <span class="leaderboard-name" role="cell">You</span>
+                                <span class="leaderboard-score" role="cell">289 pts</span>
+                                <span class="leaderboard-streak" role="cell">🔥 14d</span>
+                            </div>
+                            <div class="leaderboard-row" role="row">
+                                <span class="leaderboard-rank" role="cell">4️⃣</span>
+                                <div class="leaderboard-avatar" style="background:rgba(16,185,129,0.2);" role="cell">🚀
+                                </div>
+                                <span class="leaderboard-name" role="cell">Riya S.</span>
+                                <span class="leaderboard-score" role="cell">245 pts</span>
+                                <span class="leaderboard-streak" role="cell">🔥 12d</span>
+                            </div>
+                            <div class="leaderboard-row" role="row">
+                                <span class="leaderboard-rank" role="cell">5️⃣</span>
+                                <div class="leaderboard-avatar" style="background:rgba(239,68,68,0.15);" role="cell">💪
+                                </div>
+                                <span class="leaderboard-name" role="cell">Dev P.</span>
+                                <span class="leaderboard-score" role="cell">201 pts</span>
+                                <span class="leaderboard-streak" role="cell">🔥 9d</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============================================
+     PRICING SECTION
+     ============================================ -->
+        <section class="section pricing-section" id="pricing" aria-labelledby="pricing-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="badge badge-primary">💰 Simple Pricing</span>
+                    <h2 class="section-title" id="pricing-heading">Pay Only for <span class="text-gradient">What You
+                            Use</span></h2>
+                    <p class="section-subtitle">No monthly subscriptions. Buy credits and use them however you like.
+                        Start with 20 free credits, no card required.</p>
+                </div>
+                <!-- Pricing cards rendered dynamically from js/config.js -->
+                <div class="pricing-grid" id="pricingGrid"></div>
+                <!-- Credit Cost Breakdown -->
+                <div style="margin-top:60px;">
+                    <div class="section-header animate-on-scroll" style="margin-bottom:0;">
+                        <h3 class="section-title" style="font-size:28px;">Credit Cost per Action</h3>
+                    </div>
+                </div>
+                <!-- Credit cost table rendered dynamically from js/config.js -->
+                <div class="credit-table animate-on-scroll" style="max-width:600px;margin:24px auto 0;" role="table"
+                    aria-label="Credit costs table">
+                    <div class="credit-table-header" role="row">
+                        <span role="columnheader">Action</span>
+                        <span role="columnheader">Credits</span>
+                    </div>
+                    <div id="creditCostTable"></div>
+                </div>
+            </div>
+        </section>
+        <!-- ============================================
+     TESTIMONIALS
+     ============================================ -->
+        <section class="section" id="testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="badge badge-gold">⭐ Student Love</span>
+                    <h2 class="section-title" id="testimonials-heading">What <span class="text-gradient">JEE
+                            Aspirants</span> Are Saying</h2>
+                    <p class="section-subtitle">Join thousands of students who upgraded their prep with Jeenie.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
+                        <p class="testimonial-stars">★★★★★</p>
+                        <p class="testimonial-text">I used to read 3-hour PDFs. Now I just ask Jeenie for a summary and
+                            get crisp bullet points in 30 seconds. My revision speed has literally 3x'd. The mindmaps
+                            are 🤌</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar" style="background:rgba(108,61,232,0.2);">👨</div>
+                            <div>
+                                <div class="testimonial-name">Rahul Sharma</div>
+                                <div class="testimonial-sub">JEE Mains 2024 · 98.7 percentile</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
+                        <p class="testimonial-stars">★★★★★</p>
+                        <p class="testimonial-text">The doubt solver is insane. I snapped a photo of a complex Organic
+                            Chemistry question and got a full step-by-step solution in under 10 seconds. My coaching
+                            teacher would've taken 20 minutes.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar" style="background:rgba(16,185,129,0.2);">👩</div>
+                            <div>
+                                <div class="testimonial-name">Ananya Patel</div>
+                                <div class="testimonial-sub">Dropped, JEE Advanced aspirant</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
+                        <p class="testimonial-stars">★★★★★</p>
+                        <p class="testimonial-text">Daily streaks got me. I'm on day 42 now and I haven't missed a
+                            single day of practice. Way more consistent than when I used Unacademy. The friend
+                            challenges are addictive 😅</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar" style="background:rgba(245,158,11,0.2);">🧑</div>
+                            <div>
+                                <div class="testimonial-name">Karthik Reddy</div>
+                                <div class="testimonial-sub">Class 11, IIT-B targeting</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============================================
+     FAQ SECTION
+     ============================================ -->
+        <section class="section" id="faq" style="background:var(--bg-surface);" aria-labelledby="faq-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="badge badge-primary">❓ FAQ</span>
+                    <h2 class="section-title" id="faq-heading">Got <span class="text-gradient">Questions?</span></h2>
+                    <p class="section-subtitle">Everything you need to know about Jeenie.</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false" id="faq-q1"
+                            aria-controls="faq-a1">
+                            Is Jeenie really free to start?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </div>
+                        <div class="faq-answer" role="region" id="faq-a1" aria-labelledby="faq-q1">
+                            <div class="faq-answer-inner">Yes! Every new user gets <span
+                                    data-cfg="signupCredits">10</span> free credits on signup — no payment or card
+                                required. Your daily streak questions are always free, forever. You only pay when you
+                                want more credits.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false" id="faq-q2"
+                            aria-controls="faq-a2">
+                            How do I make a payment? Is it safe?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </div>
+                        <div class="faq-answer" role="region" id="faq-a2" aria-labelledby="faq-q2">
+                            <div class="faq-answer-inner">All payments are processed securely through
+                                <strong>Razorpay</strong>, India's most trusted payment gateway. You can pay via UPI,
+                                credit/debit cards, net banking, or wallets. Your card details are never stored on our
+                                servers. After payment, credits are added to your account and you receive a confirmation
+                                in the WhatsApp chat within minutes.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            Do credits expire?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">No! Your purchased credits never expire. Use them at your own
+                                pace. Only the <span data-cfg="signupCredits">10</span> free signup credits expire after
+                                <span data-cfg="freeSignupExpiry">30</span> days if unused.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            What subjects does Jeenie cover?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Jeenie covers all three JEE subjects: <strong>Physics</strong>
+                                (Mechanics, Thermodynamics, Electrostatics, Optics, Modern Physics),
+                                <strong>Chemistry</strong> (Physical, Organic, Inorganic), and
+                                <strong>Mathematics</strong> (Calculus, Algebra, Coordinate Geometry, Vectors,
+                                Probability). Full JEE Mains + Advanced syllabus.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            Can I get a refund?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Yes. If you purchased credits but haven't used any of them,
+                                you can request a full refund within 7 days of purchase. If some credits have been used,
+                                we offer a pro-rated refund for unused credits. Please see our <a
+                                    href="refund-policy.html" style="color:var(--primary-light);">Refund Policy</a> for
+                                full details, or contact us at <a href="mailto:support@jeenie.koax.in"
+                                    style="color:var(--primary-light);">support@jeenie.koax.in</a>.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            How does the referral system work?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Ask Jeenie for your referral link by typing "refer a friend".
+                                Share it with your friends. When they sign up and activate, both of you get
+                                <strong><span data-cfg="referralCredits">10</span> bonus credits</strong> automatically.
+                                No limit on referrals!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============================================
+     CTA SECTION
+     ============================================ -->
+        <section class="section cta-section" aria-labelledby="cta-heading">
+            <div class="cta-bg" aria-hidden="true"></div>
+            <div class="container" style="position:relative;z-index:2;">
+                <span class="badge badge-green" style="margin-bottom:20px;display:inline-flex;">🎁 <span
+                        data-cfg="signupCredits">10</span> Free Credits — No Card Required</span>
+                <h2 id="cta-heading">Ready to <span class="text-gradient">Ace Your JEE?</span></h2>
+                <p>Join 5,000+ students already prepping smarter with Jeenie. Start with <span
+                        data-cfg="signupCredits">10</span> free credits — no card needed.</p>
+                <div class="cta-actions">
+                    <a href="https://wa.me/91XXXXXXXXXX?text=Hi+Jeenie!+I+want+to+start+my+JEE+prep+%F0%9F%9A%80"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg wa-start"
+                        id="cta-main-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        Start on WhatsApp — It's Free
+                    </a>
+                    <a href="#pricing" class="btn btn-outline btn-lg">View All Plans</a>
+                </div>
+                <div class="cta-trust">
+                    <span class="cta-trust-item">🔒 Secured by Razorpay</span>
+                    <span class="cta-trust-item">✅ No app download needed</span>
+                    <span class="cta-trust-item">💳 UPI, Cards & Net Banking</span>
+                    <span class="cta-trust-item">↩️ 7-day refund guarantee</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ============================================
+     FOOTER
+     ============================================ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>
+                        <span
+                            style="width:28px;height:28px;background:var(--gradient-primary);border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;"
+                            aria-hidden="true">🧠</span>
+                        Jeenie
+                    </h3>
+                    <p>AI-powered JEE preparation on WhatsApp. Practice smarter, stay consistent, and crack IIT with
+                        Jeenie as your daily prep partner.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/jeenieindia" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="Follow Jeenie on Instagram">📸</a>
+                        <a href="https://twitter.com/jeenieindia" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="Follow Jeenie on Twitter">🐦</a>
+                        <a href="https://youtube.com/@jeenieindia" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="Jeenie on YouTube">▶️</a>
+                        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="Chat with Jeenie on WhatsApp">💬</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <nav class="footer-links" aria-label="Product links">
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#streak">Daily Streaks</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#faq">FAQ</a>
+                    </nav>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <nav class="footer-links" aria-label="Legal links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="refund-policy.html">Refund Policy</a>
+                        <a href="contact.html">Contact Us</a>
+                    </nav>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <nav class="footer-links" aria-label="Support links">
+                        <a href="mailto:support@jeenie.koax.in">Email Support</a>
+                        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp
+                            Support</a>
+                        <a href="contact.html">Contact Form</a>
+                    </nav>
+                    <div style="margin-top:16px;">
+                        <span style="font-size:12px;color:var(--text-muted);">📧 support@jeenie.koax.in</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Jeenie (jeenie.koax.in). All rights reserved. Operated by Koax Technologies.</p>
+                <div class="footer-badges">
+                    <div class="razorpay-badge">
+                        <span>🔒</span>
+                        Secured by Razorpay
+                    </div>
+                    <div class="razorpay-badge">
+                        <span>🇮🇳</span>
+                        Made in India
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
