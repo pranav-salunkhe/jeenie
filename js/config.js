@@ -46,12 +46,12 @@ const JEENIE_CONFIG = {
             referralBonus: false,
         },
         {
-            id: 'popular',
+            id: 'pro',
             emoji: '⚡',
-            name: 'Popular',
+            name: 'Pro',
             price: 299,
             credits: 120,
-            popular: true,
+            popular: false,
             features: [
                 '60 Mini Tests (5 Qs each)',
                 '120 Text Doubts',
@@ -65,12 +65,12 @@ const JEENIE_CONFIG = {
             referralBonus: false,
         },
         {
-            id: 'pro',
+            id: 'ultimate',
             emoji: '🚀',
-            name: 'Pro',
+            name: 'Ultimate',
             price: 499,
             credits: 300,
-            popular: false,
+            popular: true,
             features: [
                 '150 Mini Tests (5 Qs each)',
                 '300 Text Doubts',
